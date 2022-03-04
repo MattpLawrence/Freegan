@@ -21,7 +21,7 @@ app.use(express.json());
 //Add build lines later
 
 // ************************************Socket.io**************************************
-const botName = "Gamer Gabble Bot";
+const botName = "Freegan";
 
 // run when client connects
 io.on("connection", (socket) => {
@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
     socket.join(user.room);
 
     //emit object to be grabbed with socket.on() in main.js to be viewable only the one connecting
-    socket.emit("message", formatMessage(botName, "Welcome to Gamer Gabble"));
+    socket.emit("message", formatMessage(botName, "Welcome to Freegan"));
 
     // Broadcast when user connects to everyone but user in the room
     socket.broadcast
