@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Item = require('./Item');
 
 const userSchema = new Schema({
   email: {
@@ -15,6 +16,7 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Profile'
   },
+  items: [Item.schema]
 });
 
 const User = model('User', userSchema);
