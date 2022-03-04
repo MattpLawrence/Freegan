@@ -21,15 +21,25 @@ const itemSchema = new Schema({
         required: true,
         trim: true
     },
+    quantity: {
+        type: Number,
+        min: 0,
+        default: 0
+    },
     itemSpecifics: {
         type: String,
         required: true,
         trim: true
-    }
-
-
+    },
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true
+    }  
 });
 
-const Item = model('Item', itemSchema)
+
+const Item = model('Item', itemSchema);
+
 
 module.exports = Item;
