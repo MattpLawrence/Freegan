@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Images for slider component */
+.Logo {
+  background-image: url(./components/assets/images/freegan_logo.gif);
+}
+
+.Birds {
+  background-image: url(./components/assets/images/birds.jpg);
+}
+
+.Forest {
+  background-image: url(./components/assets/images/forest_bkgd.jpg);
+}
+
+.Neighbor {
+  background-image: url(./components/assets/images/love_neighbor_wall.jpg);
+}
+
+.Sunset {
+  background-image: url(./components/assets/images/sunset.jpg);
+}
