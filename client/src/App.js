@@ -1,5 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import Home from './pages/Home';
+import Member from './pages/Member';
+
+// constructor that will be used for GraphQL API endpoint
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
 
 function App() {
   return (
