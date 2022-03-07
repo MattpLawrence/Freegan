@@ -24,5 +24,8 @@
   "dependencies": {
     "materialize-css": "^1.0.0-rc.2",
     "react-router-dom": "^6.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }
