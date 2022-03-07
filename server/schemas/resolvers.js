@@ -61,16 +61,30 @@ const resolvers = {
         // add an Order
         addOrder: async ({ claimDate,items }) => {
             return await Order.create({ claimDate,items })
-        }
-
-        
-
+        },
         // update Item
-
+        updateItem: async({ name,description,image, quantity, category }) => {
+            return await Item.create({ name,description,image, quantity, category})
+        },
         // login verification
+        login: async({ email, password }) => {
+            await User.findOne({ email });
 
-
-    }
+            if (!user) {
+                throw new AuthenticationError('Incorrect credentials');
+              }
+        
+              const correctPw = await user.isCorrectPassword(password);
+        
+              if (!correctPw) {
+                throw new AuthenticationError('Incorrect credentials');
+              }
+        
+              const token = signToken(user);
+        
+              return { token, user };
+            },
+    }  
 };
 
 module.exports = resolvers;
