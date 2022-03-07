@@ -1,21 +1,22 @@
 import React from "react";
 import Auth from "../utils/auth";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function navbar() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <div className="nav-wrapper">
-          <ul id="nav-mobile" className="right hide-on-med-and-down flex-row">
-            <li className="mx-1 brand-logo">
-              <Link to="/">Freegan</Link>
+          <a className="brand-logo">Logo</a>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li className="mx-1">
+              <a to="/">Freegan</a>
             </li>
             <li className="mx-1">
-              <Link to="/dashboard">Dashboard</Link>
+              <a to="/dashboard">Dashboard</a>
             </li>
             <li className="mx-1">
-              <Link to="/profile">Profile</Link>
+              <a to="/profile">Profile</a>
             </li>
             <li className="mx-1">
               <a href="/" onClick={() => Auth.logout()}>
@@ -27,16 +28,17 @@ function navbar() {
       );
     } else {
       return (
-        <div className="nav-wrapper">
-          <ul id="nav-mobile" className="right hide-on-med-and-down flex-row">
-            <li className="mx-1 brand-logo">
-              <Link to="/">Freegan</Link>
+        <div className="nav-wrapper leftAlign">
+          <a className="brand-logo left">Logo</a>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li className="">
+              <a to="/">Freegan</a>
             </li>
             <li className="mx-1">
-              <Link to="/signup">Signup</Link>
+              <a to="/signup">Signup</a>
             </li>
             <li className="mx-1">
-              <Link to="/login">Log-In</Link>
+              <a to="/login">Log-In</a>
             </li>
           </ul>
         </div>

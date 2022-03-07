@@ -3,7 +3,10 @@ import "../src/components/Slider";
 import "./styles/App.css";
 import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ChatPage from "./components/chat/ChatPage";
+import Navbar from "./components/Navbar";
+import SignUp from "./pages/SignUpPage";
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -24,7 +27,9 @@ function App() {
   return (
     <div className="App">
       <div className="App">
-        <ChatPage />
+        <Navbar />
+        {/* <ChatPage /> */}
+        <SignUp />
       </div>
     </div>
   );
