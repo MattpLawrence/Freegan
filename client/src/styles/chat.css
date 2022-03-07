@@ -17,6 +17,9 @@
   --gray: #31363b;
 }
 
+.rightAlign {
+  text-align: right;
+}
 #logo {
   color: var(--brightGreen);
 }
