@@ -1,0 +1,14 @@
+[
+    {
+        "firstName":"Rosie",
+        "lastName":"DaDog",
+        "zipCode":30306,
+        "photo":"./seed_images/Rosie.jpeg"
+    },
+    {
+        "firstName":"Ryder",
+        "lastName":"DaPuppie",
+        "zipCode":52043,
+        "photo":"./seed_images/Ryder.jpeg"
+    }
+]
