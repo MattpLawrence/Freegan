@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./styles/App.css";
 import ChatPage from "./components/chat/ChatPage";
 
 function App() {
