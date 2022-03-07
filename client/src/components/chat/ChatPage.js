@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/chat.css";
+import "materialize-css/dist/css/materialize.min.css";
 
 function ChatPage() {
   return (
@@ -34,6 +35,9 @@ function ChatPage() {
             >
               <i className="fas fa-paper-plane"></i> Send
             </button>
+            <a className="waves-effect waves-light btn" id="sendBtn">
+              button
+            </a>
           </form>
         </div>
       </div>
