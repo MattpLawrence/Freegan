@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import moment from "moment";
 
 function ChatForm(props) {
   const [msg, setMsg] = useState("");
@@ -12,6 +13,7 @@ function ChatForm(props) {
         id: Math.random(Math.floor(Math.random() * 8)),
         msgText: msg,
         userName: "tbd",
+        time: moment().format("h:mm a"),
       });
       setMsg("");
     })();
