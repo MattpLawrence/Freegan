@@ -15,14 +15,14 @@ const typeDefs = gql`
     lastName: String
     zipCode: Int
     photo: String
-    profile: [Profile]
+    profile: Profile
   }
 
   type User {
     _id: ID
     email: String
     password: String
-    profile: [Profile]
+    profile: Profile
     items: [Item]
   }
 
@@ -36,10 +36,6 @@ const typeDefs = gql`
     profiles: [Profile]
     users: [User]
     categories:[Category]
-  }
-
-  type Mutation {
-    
   }
 `;
 

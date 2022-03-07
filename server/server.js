@@ -3,6 +3,7 @@ const express = require ('express');
 const {ApolloServer} = require('apollo-server-express');
 const {typeDefs, resolvers} = require('./schemas');
 const db = require ('./config/connection');
+//const path = require('path');  <- create this line later to connect front and back end
 
 // Define Local host port
 const PORT = process.env.PORT || 3001;
@@ -25,7 +26,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
     db.once('open', ()=>{
         app.listen(PORT, ()=>{
             console.log(`Server is running ${PORT}`)
-            console.log(`GraphQL server at http://localhost:${3001}${server.graphqlPath}`)
+            console.log(`GraphQL server at http://localhost:${PORT}${server.graphqlPath}`)
         })
     })
     
