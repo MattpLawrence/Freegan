@@ -4,7 +4,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import ChatList from "./ChatList";
 import ChatForm from "./ChatForm";
 
-function ChatPage() {
+function ChatPage({ socket }) {
   const [msgList, setMsgList] = useState([]);
 
   const addMessage = (msg) => {
@@ -37,7 +37,7 @@ function ChatPage() {
           </div>
         </main>
         <div className="chat-form-container">
-          <ChatForm addMessage={addMessage} />
+          <ChatForm addMessage={addMessage} socket={socket} />
         </div>
       </div>
     </div>

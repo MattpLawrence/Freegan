@@ -1,13 +1,10 @@
-import "./styles/App.css";
-import ChatPage from "./components/chat/ChatPage";
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../src/components/Slider";
+import "./styles/App.css";
 import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/client";
-
-import Home from "./pages/Home";
-import Member from "./pages/Member";
+import io from "socket.io-client";
+import ChatPage from "./components/chat/ChatPage";
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -25,10 +22,19 @@ const authLink = setContext((_, { headers }) => {
 });
 
 function App() {
-  return <div className="App">
-    <div className="App">
-      <ChatPage />
-    </div></div>;
-}
+  const [socket, setSocket] = useState(null);
+  useEffect(() => {
+    const newSocket = io(`http://${window.location.hostname}:3000`);
+    setSocket(newSocket);
+    return () => newSocket.close();
+  }, [setSocket]);
 
+  return (
+    <div className="App">
+      <div className="App">
+        <ChatPage socket={socket} />
+      </div>
+    </div>
+  );
+}
 export default App;
