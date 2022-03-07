@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import 'materialize-css/dist/css/materialize.min.css'
-
+// import { Slider } from 'materialize-css'
 
 export default class Slider extends Component {
   render() {
