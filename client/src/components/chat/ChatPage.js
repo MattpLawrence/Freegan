@@ -5,6 +5,18 @@ import ChatList from "./ChatList";
 import ChatForm from "./ChatForm";
 
 function ChatPage() {
+  const [msgList, setMsgList] = useState([]);
+
+  const addMessage = (msg) => {
+    // check to see if anything ahs been passed through
+    if (!msg) {
+      return;
+    }
+    //Add message to array
+    const newList = [msg, ...msgList];
+    setMsgList(newList);
+  };
+
   return (
     <div className="container" id="chatShadow">
       <div className="chat-container">
@@ -23,7 +35,7 @@ function ChatPage() {
           <div className="chat-messages"></div>
         </main>
         <div className="chat-form-container">
-          <ChatForm />
+          <ChatForm addMessage={addMessage} />
         </div>
       </div>
     </div>
