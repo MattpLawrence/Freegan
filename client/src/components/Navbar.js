@@ -1,11 +1,11 @@
 import React from 'react';
-import Auth from "../utils/";
+import auth from "../utils/auth";
 import {  Link } from "react-router-dom";
 
 function navbar() {
 
   function showNavigation() {
-    if (Auth.loggedIn()) {
+    if (auth.loggedIn()) {
       return (
         <div className="nav-wrapper">
           <ul id="nav-mobile" className="right hide-on-med-and-down flex-row">
@@ -25,7 +25,7 @@ function navbar() {
               </Link>
             </li>
             <li className="mx-1">
-              <a href="/" onClick={() => Auth.logout()}>
+              <a href="/" onClick={() => auth.logout()}>
                 Logout
               </a>
             </li>
