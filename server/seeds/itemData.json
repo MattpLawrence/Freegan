@@ -2,25 +2,25 @@
     {
         "name":"socks",
         "description":"A pair of socks lightly chewed by the adorable lab puppy Ryder",
-        "image":"./",
+        "image":"./seed_images/sock.jpeg",
         "quantity":1
     },
     {
         "name":"a blue plushie",
         "description":"A lightly used Stitch plush",
-        "image":"./",
+        "image":"./seed_images/plush.jpeg",
         "quantity":1
     },
     {
         "name":"clothespins",
         "description":"Unopened soft clothespins",
-        "image":"./",
+        "image":"./seed_images/clothespin.jpeg",
         "quantity":1
     },
     {
         "name":"plastic drawers",
         "description":"Lightly ",
-        "image":"./",
+        "image":"./seed_images/drawer.jpeg",
         "quantity":1
     }
 ]
