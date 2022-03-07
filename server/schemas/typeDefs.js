@@ -37,6 +37,10 @@ const typeDefs = gql`
     users: [User]
     categories:[Category]
   }
+
+  type Mutation {
+    
+  }
 `;
 
 module.exports = typeDefs;
