@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/signup.css";
 
 function SignUp() {
@@ -10,7 +10,7 @@ function SignUp() {
   const [rePassword, setRePassword] = useState("");
   const [valid, setValid] = useState("");
 
-  function handleChange(e) {
+  const handleChange = async (e) => {
     if (e.target.id === "firstName") {
       setFirstName(e.target.value);
     } else if (e.target.id === "lastName") {
@@ -21,9 +21,9 @@ function SignUp() {
       setPassword(e.target.value);
     } else {
       setRePassword(e.target.value);
-      validate();
+      // Validate();
     }
-  }
+  };
   function submitForm(e) {
     e.preventDefault();
     if (password !== rePassword) {
@@ -42,15 +42,20 @@ function SignUp() {
       setRePassword("");
     }
   }
-  function validate() {
-    if (password === rePassword) {
-      setValid("valid");
-      console.log(valid);
+  // function Validate() {
+  useEffect(() => {
+    if (rePassword.length === 0) {
     } else {
-      setValid("notValid");
-      console.log(`not ${valid}`);
+      if (password === rePassword) {
+        setValid("valid");
+        console.log(valid);
+      } else {
+        setValid("notValid");
+        console.log(`not ${valid}`);
+      }
     }
-  }
+  });
+  // }
 
   return (
     <div>
