@@ -30,9 +30,11 @@ function ChatPage() {
             <h3>
               <i className="fas fa-users"></i> Users
             </h3>
-            <ChatList />
+            <ul id="users">{/* <li>{{userData.name_display}}</li> */}</ul>
           </div>
-          <div className="chat-messages"></div>
+          <div className="chat-messages">
+            <ChatList msgList={msgList} />
+          </div>
         </main>
         <div className="chat-form-container">
           <ChatForm addMessage={addMessage} />

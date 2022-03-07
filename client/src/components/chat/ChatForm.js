@@ -8,6 +8,7 @@ function ChatForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(msg);
     (() => {
       props.addMessage({
         id: Math.random(Math.floor(Math.random() * 8)),
@@ -18,21 +19,25 @@ function ChatForm(props) {
       setMsg("");
     })();
   };
+  const handleChange = (e) => {
+    setMsg(e.target.value);
+  };
 
   return (
-    <form id="chat-form">
+    <form id="chat-form" onSubmit={handleSubmit}>
       <input
         id="msg"
         type="text"
         placeholder="Enter Message"
         value={msg}
         required
-        autocomplete="off"
+        autoComplete="off"
+        onChange={handleChange}
       />
-      <a className="waves-effect waves-light btn" id="sendBtn">
+      <button className="waves-effect waves-light btn" id="sendBtn">
         <FontAwesomeIcon icon={faPaperPlane} className="faIcon" />
         &nbsp;&nbsp;Send
-      </a>
+      </button>
     </form>
   );
 }
