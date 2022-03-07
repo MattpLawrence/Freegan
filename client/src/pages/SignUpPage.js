@@ -2,25 +2,53 @@ import React, { useState } from "react";
 import "../styles/signup.css";
 
 function SignUp() {
-  const [userInfo, setUserInfo] = useState([]);
+  const [userInfo, setUserInfo] = useState({});
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rePassword, setRePassword] = useState("");
+  const [valid, setValid] = useState("");
 
   function handleChange(e) {
     if (e.target.id === "firstName") {
       setFirstName(e.target.value);
-      console.log(firstName);
     } else if (e.target.id === "lastName") {
       setLastName(e.target.value);
-      console.log(lastName);
     } else if (e.target.id === "email") {
       setEmail(e.target.value);
-      console.log(email);
-    } else {
+    } else if (e.target.id === "password") {
       setPassword(e.target.value);
-      console.log(password);
+    } else {
+      setRePassword(e.target.value);
+      validate();
+    }
+  }
+  function submitForm(e) {
+    e.preventDefault();
+    if (password !== rePassword) {
+      console.log("dont match");
+    } else {
+      setUserInfo({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+      });
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPassword("");
+      setRePassword("");
+    }
+  }
+  function validate() {
+    if (password === rePassword) {
+      setValid("valid");
+      console.log(valid);
+    } else {
+      setValid("notValid");
+      console.log(`not ${valid}`);
     }
   }
 
@@ -28,7 +56,7 @@ function SignUp() {
     <div>
       <div className="container signUpContainer">
         <div className="row">
-          <form className="col s12" id="reg-form">
+          <form className="col s12" id="reg-form" onSubmit={submitForm}>
             <div className="row">
               <div className="input-field col s6">
                 <input
@@ -78,6 +106,21 @@ function SignUp() {
                   onChange={handleChange}
                 />
                 <label htmlFor="password">Password</label>
+              </div>
+            </div>
+            <div className="row">
+              <div className="input-field col s12">
+                <input
+                  id="rePassword"
+                  type="password"
+                  className="validate"
+                  minLength="6"
+                  required
+                  value={rePassword}
+                  onChange={handleChange}
+                />
+                <label htmlFor="rePassword">Re-Enter Password</label>
+                <a className={valid}>Hello</a>
               </div>
             </div>
             <div className="row">

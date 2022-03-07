@@ -38,6 +38,13 @@ radio:required {
 .container {
   animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
 }
+.valid {
+  content: "Passwords Match";
+}
+.notValid {
+  content: "Passwords Do Not Match";
+  color: yellow;
+}
 
 @keyframes showUp {
   0% {
