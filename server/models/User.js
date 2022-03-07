@@ -18,7 +18,7 @@ const userSchema = new Schema({
       ref: "Profile",
     },
   ],
-  items: [Item.schema],
+  //items: [Item.schema],
 });
 
 const User = model("User", userSchema);
