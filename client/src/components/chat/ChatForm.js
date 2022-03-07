@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
-// const socket = io();
 
 function ChatForm(props) {
   const [msg, setMsg] = useState("");
@@ -17,7 +16,7 @@ function ChatForm(props) {
         userName: "tbd",
         time: moment().format("h:mm a"),
       });
-      props.socket.emit("chatMessage");
+
       setMsg("");
     })();
   };
