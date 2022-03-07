@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../../styles/chat.css";
 import "materialize-css/dist/css/materialize.min.css";
+import ChatList from "./ChatList";
+import ChatForm from "./ChatForm";
 
 function ChatPage() {
   return (
@@ -16,29 +18,12 @@ function ChatPage() {
             <h3>
               <i className="fas fa-users"></i> Users
             </h3>
-            <ul id="users">{/* <li> display name</li> */}</ul>
+            <ChatList />
           </div>
           <div className="chat-messages"></div>
         </main>
         <div className="chat-form-container">
-          <form id="chat-form">
-            <input
-              id="msg"
-              type="text"
-              placeholder="Enter Message"
-              required
-              autocomplete="off"
-            />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              id="sendBtn"
-            >
-              <i className="fas fa-paper-plane"></i> Send
-            </button>
-            <a className="waves-effect waves-light btn" id="sendBtn">
-              button
-            </a>
-          </form>
+          <ChatForm />
         </div>
       </div>
     </div>
