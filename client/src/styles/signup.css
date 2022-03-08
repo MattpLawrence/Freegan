@@ -40,10 +40,11 @@ radio:required {
 }
 .valid {
   content: "Passwords Match";
+  color: #2bbbad;
 }
 .notValid {
   content: "Passwords Do Not Match";
-  color: yellow;
+  color: #f44336;
 }
 
 @keyframes showUp {

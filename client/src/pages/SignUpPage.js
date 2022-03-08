@@ -9,6 +9,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
   const [valid, setValid] = useState("");
+  const [passText, setPassText] = useState("");
 
   const handleChange = async (e) => {
     if (e.target.id === "firstName") {
@@ -42,15 +43,18 @@ function SignUp() {
       setRePassword("");
     }
   }
+  let validation = "";
   // function Validate() {
   useEffect(() => {
     if (rePassword.length === 0) {
     } else {
       if (password === rePassword) {
         setValid("valid");
+        setPassText("Passwords Match");
         console.log(valid);
       } else {
         setValid("notValid");
+        setPassText("Passwords Do Not Match");
         console.log(`not ${valid}`);
       }
     }
@@ -125,7 +129,7 @@ function SignUp() {
                   onChange={handleChange}
                 />
                 <label htmlFor="rePassword">Re-Enter Password</label>
-                <a className={valid}>Hello</a>
+                <a className={valid}>{passText}</a>
               </div>
             </div>
             <div className="row">
