@@ -2,6 +2,7 @@ import React from "react";
 
 function ChatList(props) {
   console.log(props.msgList);
+
   return props.msgList
     .slice(0)
     .reverse()
