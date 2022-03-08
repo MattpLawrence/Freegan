@@ -3,8 +3,9 @@ import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
 function navbar() {
+
   function showNavigation() {
-    if (Auth.loggedIn()) {
+    if (auth.loggedIn()) {
       return (
         <div className="nav-wrapper">
           <Link to={{ pathname: `/signupPage` }} className="brand-logo">
@@ -16,18 +17,23 @@ function navbar() {
               <a to="/">Freegan</a>
             </li>
             <li className="mx-1">
-              <a to="/dashboard">Dashboard</a>
+              <Link to="/dashboard">
+                Dashboard
+              </Link>
             </li>
             <li className="mx-1">
-              <a to="/profile">Profile</a>
+              <Link to="/profile">
+                Profile
+              </Link>
             </li>
             <li className="mx-1">
-              <a href="/" onClick={() => Auth.logout()}>
+              <a href="/" onClick={() => auth.logout()}>
                 Logout
               </a>
             </li>
           </ul>
         </div>
+        
       );
     } else {
       return (
@@ -50,7 +56,9 @@ function navbar() {
 
   return (
     <header className="flex-row px-1">
-      <nav>{showNavigation()}</nav>
+      <nav>
+        {showNavigation()}
+      </nav>
     </header>
   );
 }

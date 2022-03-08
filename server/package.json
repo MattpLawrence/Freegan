@@ -11,10 +11,16 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^3.6.3",
+    "concurrently": "^7.0.0",
     "express": "^4.17.3",
     "graphql": "^16.3.0",
+    "jsonwebtoken": "^8.5.1",
+<<<<<<< HEAD
     "mongoose": "^6.2.4",
     "socket.io": "^4.4.1"
+=======
+    "mongoose": "^6.2.4"
+>>>>>>> 7084a6225202b7d24ebfa03423a93efaff6c4f8a
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
