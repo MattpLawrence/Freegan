@@ -1,14 +1,18 @@
 import React from "react";
 
+
 function Item() {
   return (
     <div>
       <div class="row">
+
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
               {/* Add image as the src, and potentially description as alt text */}
-              <img src="" alt="item" />
+
+              <img src="" alt="item"/>
+
               <span class="card-title">Item Name</span>
             </div>
             <div class="card-content">
