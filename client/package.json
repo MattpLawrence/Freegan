@@ -7,8 +7,16 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "jwt-decode": "^3.1.2",
+=======
+<<<<<<< HEAD
+    "concurrently": "^7.0.0",
+    "jwt-decode": "^3.1.2",
+=======
+>>>>>>> f7d84231e164575003288a40d62d05d1d40437fe
     "materialize-css": "^1.0.0",
+>>>>>>> 181e8a31c4fcf6f9c8d69d5e9493bd9fb18c8806
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
