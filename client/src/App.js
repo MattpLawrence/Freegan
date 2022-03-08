@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ChatPage from "./components/chat/ChatPage";
 import Navbar from "./components/Navbar";
 import SignUp from "./pages/SignUpPage";
+import Home from "./pages/Home";
+import SignUpPage from "./pages/SignUpPage";
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -25,13 +27,18 @@ const authLink = setContext((_, { headers }) => {
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <div className="App">
         <Navbar />
-        {/* <ChatPage /> */}
-        <SignUp />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUpPage />} />
+
+          {/* <ChatPage /> */}
+          <SignUp />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 export default App;
