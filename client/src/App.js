@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import "../src/components/Slider";
-import "./styles/App.css";
-import { setContext } from "@apollo/client/link/context";
-import { createHttpLink } from "@apollo/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ChatPage from "./components/chat/ChatPage";
+import React from "react";
 import Navbar from "./components/Navbar";
-import SignUp from "./pages/SignUpPage";
+
+import { setContext } from "@apollo/client/link/context";
+import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@apollo/client";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import User from "./pages/User";
+import { Route, Router, Routes } from "react-router-dom";
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -23,15 +25,39 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+
 function App() {
   return (
-    <div className="App">
-      <div className="App">
-        <Navbar />
-        {/* <ChatPage /> */}
-        <SignUp />
-      </div>
-    </div>
-  );
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Navbar />
+          <Routes>
+            <Route
+              path ="/"
+              element={<Home />}
+            />
+            <Route
+              path="/user"
+              element={<User />}
+              />
+            <Route 
+              path="/login" 
+              element={<Login />} 
+            />
+            <Route 
+              path="/signup" 
+              element={<Signup />} 
+            />
+          </Routes>
+        </div>
+      </Router>
+    </ApolloProvider>
+  )
 }
 export default App;
