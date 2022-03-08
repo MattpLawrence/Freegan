@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <div>
       <h1>THis is the HomePage</h1>
-      <ChatPage />
+      <Slider />
     </div>
   );
 }

@@ -18,7 +18,7 @@ function ChatPage({ socket }) {
   };
 
   return (
-    <div className="container" id="chatShadow">
+    <div className="container" id="userPage">
       <div className="chat-container">
         <header className="chat-header">
           <h5>Chat</h5>
