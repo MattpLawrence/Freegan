@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/signup.css";
 
 function SignUpPage() {
@@ -137,7 +138,7 @@ function SignUpPage() {
                   type="submit"
                   name="action"
                 >
-                  Register
+                  <Link to={{ pathname: `/userPage` }}>Register</Link>
                   <i className="material-icons right">done</i>
                 </button>
               </div>
