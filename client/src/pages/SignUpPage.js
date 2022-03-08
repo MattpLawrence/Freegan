@@ -22,7 +22,6 @@ function SignUpPage() {
       setPassword(e.target.value);
     } else {
       setRePassword(e.target.value);
-      // Validate();
     }
   };
   function submitForm(e) {
@@ -43,8 +42,7 @@ function SignUpPage() {
       setRePassword("");
     }
   }
-  let validation = "";
-  // function Validate() {
+  //validate that thew two passwords match
   useEffect(() => {
     if (rePassword.length === 0) {
     } else {
