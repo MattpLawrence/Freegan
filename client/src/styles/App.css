@@ -45,6 +45,9 @@ body {
 .leftAlign .left {
   margin-left: 1rem;
 }
+.carousel {
+  perspective: none !important;
+}
 
 @keyframes App-logo-spin {
   from {
