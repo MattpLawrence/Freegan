@@ -19,17 +19,19 @@ function ChatPage({ socket }) {
 
   return (
     <div className="container" id="userPage">
-      <div className="chat-container">
-        <header className="chat-header">
-          <h5>Chat</h5>
-        </header>
+      <div className="row">
+        <div className="chat-container col s6">
+          <header className="chat-header">
+            <h5>Chat</h5>
+          </header>
 
-        <div className="chat-messages">
-          <ChatList msgList={msgList} />
-        </div>
+          <div className="chat-messages">
+            <ChatList msgList={msgList} />
+          </div>
 
-        <div className="chat-form-container">
-          <ChatForm addMessage={addMessage} socket={socket} />
+          <div className="chat-form-container">
+            <ChatForm addMessage={addMessage} socket={socket} />
+          </div>
         </div>
       </div>
     </div>

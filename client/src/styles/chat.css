@@ -100,19 +100,16 @@ a {
 }
 
 .chat-container {
-  max-width: 1100px;
   background: #fff;
   margin: 40px auto;
   overflow: hidden;
 }
 
 .chat-header {
-  padding-top: 1000px;
   background: var(--red);
   color: white;
-  padding: 15px;
+  padding: 5px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -159,6 +156,7 @@ a {
 
 .chat-messages {
   padding: 30px;
+
   max-height: 30vh;
   min-height: 20vh;
   overflow-y: scroll;
@@ -198,7 +196,7 @@ a {
 }
 
 .chat-form-container {
-  padding: 20px 30px;
+  padding: 10px 10px;
   background-color: var(--red);
 }
 
@@ -209,7 +207,7 @@ a {
 .chat-form-container input[type="text"] {
   font-size: 16px;
   padding: 5px;
-  height: 40px;
+  height: 27px;
   flex: 1;
   background-color: var(--gray);
   /* color: white; */
