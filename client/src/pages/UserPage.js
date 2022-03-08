@@ -1,7 +1,13 @@
 import React from "react";
+import ChatPage from "../components/chat/ChatPage";
 
 function UserPage() {
-  return <h1>UserPage</h1>;
+  return (
+    <div>
+      <h1>UserPage</h1>
+      <ChatPage />
+    </div>
+  );
 }
 
-export default React;
+export default UserPage;
