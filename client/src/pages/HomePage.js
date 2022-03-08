@@ -1,12 +1,12 @@
 import React from "react";
-import Slider from "../components/Slider";
-import ChatPage from "../components/chat/ChatPage";
+
+import Carousel from "../components/Carousel";
 
 function HomePage() {
   return (
     <div>
       <h1>THis is the HomePage</h1>
-      <Slider />
+      <Carousel />
     </div>
   );
 }
