@@ -14,7 +14,6 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
 });
-const io = socketIo(server);
 
 // Set up Middleware
 app.use(express.urlencoded({ extended: false }));
@@ -37,4 +36,3 @@ const startApolloServer = async (typeDefs, resolvers) => {
 // Call function to start the server
 startApolloServer(typeDefs, resolvers);
 
-modules.export(io);
