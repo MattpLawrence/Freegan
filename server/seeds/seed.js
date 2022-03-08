@@ -13,10 +13,10 @@ db.once ('open', async ()=>{
         await Profile.deleteMany({});
         await User.deleteMany({});
         //insert data into the database for each model 
-        //const categories = await Category.insertMany(categoryData);
-        //const items = await Item.insertMany(itemData);
-        //const profiles = await Profile.insertMany(profileData); 
-        //const users = await User.insertMany(userData); 
+        const categories = await Category.insertMany(categoryData);
+        const items = await Item.insertMany(itemData);
+        const profiles = await Profile.insertMany(profileData); 
+        const users = await User.insertMany(userData); 
     } catch (err){
         console.log(err);
         process.exit(1)
