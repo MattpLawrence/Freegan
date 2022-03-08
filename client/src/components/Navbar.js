@@ -2,16 +2,6 @@ import React from "react";
 import Auth from "../utils/auth";
 // import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
-
-const navbar = () => {
-    return (
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Freegan</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><Link to="/login">Log-In</Link></li>
-            </ul>
-=======
 function navbar() {
   function showNavigation() {
     if (Auth.loggedIn()) {
@@ -51,7 +41,6 @@ function navbar() {
               <a to="/login">Log-In</a>
             </li>
           </ul>
->>>>>>> d97165f04fdc36a98c431308146f6a1643fddd54
         </div>
       );
     }
