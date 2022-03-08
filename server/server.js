@@ -1,29 +1,40 @@
-const express = require ('express');
-const {ApolloServer} = require('apollo-server-express');
-const path = require('path');
+// Import necessary packages
+const express = require("express");
+const { ApolloServer } = require("apollo-server-express");
+const { typeDefs, resolvers } = require("./schemas");
+const db = require("./config/connection");
+//const path = require('path');  <- create this line later to connect front and back end
 
-const {typeDefs, resolvers} = require('./schemas');
-const db = require ('./config/connection');
-const { type } = require('os');
-
+// Define Local host port
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+// Define server
 const server = new ApolloServer({
-    typeDefs,
-    resolvers,
+  typeDefs,
+  resolvers,
 });
+const io = socketIo(server);
 
-
-app.use(express.urlencoded({extended:false}));
+// Set up Middleware
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-//Add build lines later
 
 // Start server
 const startApolloServer = async (typeDefs, resolvers) => {
-    await server.start()
-    console.log(`Server is running ${PORT}`)
+  await server.start();
+  server.applyMiddleware({ app });
+  db.once("open", () => {
+    app.listen(PORT, () => {
+      console.log(`Server is running ${PORT}`);
+      console.log(
+        `GraphQL server at http://localhost:${PORT}${server.graphqlPath}`
+      );
+    });
+  });
 };
 
 // Call function to start the server
 startApolloServer(typeDefs, resolvers);
+
+modules.export(io);

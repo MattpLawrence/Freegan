@@ -1,0 +1,59 @@
+[
+    {
+        "email":"rosiedawg@gmail.com",
+        "password":"LoveCheeze",
+        "profile":{
+            "_id": "62265785ce9ad4464a64c40f",
+                "firstName": "Rosie",
+                "lastName": "DaDog",
+                "zipCode": 30306,
+                "photo": "./seed_images/Rosie.jpeg",
+                "items": [{
+                  "_id": "62265576f6089374098f9a2d",
+                  "name": "a blue plushie",
+                  "description": "A lightly used Stitch plush",
+                  "image": "./seed_images/plush.jpeg",
+                  "quantity": 1,
+                  "category": {
+                    "_id": "6226547efe8c9f16fa261826",
+                    "name": "toys"
+                  }
+                }]
+            }
+
+    },
+    {
+        "email":"ryderpup@gmail.com",
+        "password":"MyBabyTeefsAreGone",
+        "profile":{
+            "_id": "62265f002d635d490742740d",
+                "firstName": "Ryder",
+                "lastName": "LaPuppie",
+                "zipCode": 52043,
+                "photo": "./seed_images/Ryder.jpeg",
+                "items": [
+                  {
+                    "_id": "62265453e5b74c453829e06b",
+                    "name": "socks",
+                    "description": "A pair of socks lightly chewed by the adorable lab puppy Ryder",
+                    "image": "./seed_images/sock.jpeg",
+                    "quantity": 1,
+                    "category": {
+                      "_id": "62265419854f4a4de67a0689",
+                      "name": "clothes"
+                    }
+                  },
+                  {
+                    "_id": "622656aed42359e1dd4d2892",
+                    "name": "clothespins",
+                    "description": "Unopened soft clothespins",
+                    "image": "./seed_images/clothespin.jpeg",
+                    "quantity": 1,
+                    "category": {
+                      "_id": "622654b98c3adc72485cf326",
+                      "name": "storage"
+                    }
+                  }] 
+              } 
+        }
+]
