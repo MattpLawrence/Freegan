@@ -7,7 +7,10 @@ function navbar() {
     if (Auth.loggedIn()) {
       return (
         <div className="nav-wrapper">
-          <a className="brand-logo">Logo</a>
+          <Link to={{ pathname: `/signupPage` }} className="brand-logo">
+            SignUp
+          </Link>
+
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li className="mx-1">
               <a to="/">Freegan</a>
@@ -29,16 +32,15 @@ function navbar() {
     } else {
       return (
         <div className="nav-wrapper leftAlign">
-          <a className="brand-logo left">Logo</a>
+          <Link to={{ pathname: `/` }} className="brand-logo">
+            &nbsp;&nbsp;Freegan
+          </Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li className="">
-              <a to="/">Freegan</a>
-            </li>
             <li className="mx-1">
               <Link to={{ pathname: `/signupPage` }}>SignUp</Link>
             </li>
             <li className="mx-1">
-              <a to="/login">Log-In</a>
+              <Link to={{ pathname: `/loginPage` }}>LogIn</Link>
             </li>
           </ul>
         </div>

@@ -1,6 +1,18 @@
 .App {
   text-align: center;
 }
+body {
+  background: #222;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://unsplash.it/1200/800/?random");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-fill-mode: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .App-logo {
   height: 40vmin;
