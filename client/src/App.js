@@ -4,12 +4,11 @@ import "./styles/App.css";
 import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ChatPage from "./components/chat/ChatPage";
 import Navbar from "./components/Navbar";
-import SignUp from "./pages/SignUpPage";
-import Home from "./pages/Home";
+import Home from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import UserPage from "./pages/UserPage";
+import LoginPage from "./pages/LoginPage";
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -33,7 +32,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/signupPage" element={<SignUpPage />} />
+          <Route path="/loginPage" element={<LoginPage />} />
           <Route path="/userPage" element={<UserPage />} />
         </Routes>
       </div>

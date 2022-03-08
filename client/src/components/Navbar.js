@@ -1,6 +1,6 @@
 import React from "react";
 import Auth from "../utils/auth";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function navbar() {
   function showNavigation() {
@@ -35,7 +35,7 @@ function navbar() {
               <a to="/">Freegan</a>
             </li>
             <li className="mx-1">
-              <a to="/signup">Signup</a>
+              <Link to={{ pathname: `/signupPage` }}>SignUp</Link>
             </li>
             <li className="mx-1">
               <a to="/login">Log-In</a>

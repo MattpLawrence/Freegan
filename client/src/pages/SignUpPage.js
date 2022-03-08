@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/signup.css";
 
-function SignUp() {
+function SignUpPage() {
   const [userInfo, setUserInfo] = useState({});
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -151,4 +151,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignUpPage;
