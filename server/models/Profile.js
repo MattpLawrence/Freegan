@@ -18,7 +18,11 @@ const profileSchema = new Schema({
   photo: {
     type: String,
     trim: true
-  }
+  },
+  items:[ {
+    type: Schema.Types.ObjectId,
+    ref: 'Item'
+  }]
 });
 
 const Profile = model('Profile', profileSchema);

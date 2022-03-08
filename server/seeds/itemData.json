@@ -1,0 +1,42 @@
+[
+  {
+    "name": "socks",
+    "description": "A pair of socks lightly chewed by the adorable lab puppy Ryder",
+    "image": "./seed_images/sock.jpeg",
+    "quantity": 1,
+    "category": {
+      "_id": "62265419854f4a4de67a0689",
+      "name": "clothes"
+    }
+  },
+  {
+    "name": "a blue plushie",
+    "description": "A lightly used Stitch plush",
+    "image": "./seed_images/plush.jpeg",
+    "quantity": 1,
+    "category": {
+        "_id": "6226547efe8c9f16fa261826",
+        "name": "toys"
+      }
+  },
+  {
+    "name": "clothespins",
+    "description": "Unopened soft clothespins",
+    "image": "./seed_images/clothespin.jpeg",
+    "quantity": 1,
+    "category": {
+        "_id": "622654b98c3adc72485cf326",
+        "name": "storage"
+      }
+  },
+  {
+    "name": "plastic drawers",
+    "description": "Lightly ",
+    "image": "./seed_images/drawer.jpeg",
+    "quantity": 1,
+    "category": {
+        "_id": "622654b98c3adc72485cf326",
+        "name": "storage"
+      }
+  }
+]
