@@ -1,22 +1,22 @@
 
-import React, { useEffect, useState } from "react";
+//import React, { useEffect, useState } from "react";
 import "../src/components/Slider";
 import "./styles/App.css";
 import { setContext } from "@apollo/client/link/context";
-import { createHttpLink } from "@apollo/client";
+//import { createHttpLink } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import React from "react";
-import Navbar from "./components/Navbar";
+//import Navbar from "./components/Navbar";
 
-import { setContext } from "@apollo/client/link/context";
+//import { setContext } from "@apollo/client/link/context";
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@apollo/client";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import User from "./pages/User";
-import { Route, Router, Routes } from "react-router-dom";
+//import { Route, Router, Routes } from "react-router-dom";
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -43,19 +43,19 @@ function App() {
   return (
 
 
-    <Router>
+    // <Router>
 
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signupPage" element={<SignUpPage />} />
-          <Route path="/loginPage" element={<LoginPage />} />
-          <Route path="/userPage" element={<UserPage />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    //   <div className="App">
+    //     <Navbar />
+    //     <Routes>
+    //       <Route path="/" element={<Home />} />
+    //       <Route path="/signupPage" element={<Signup />} />
+    //       <Route path="/loginPage" element={<Login />} />
+    //       <Route path="/userPage" element={<User />} />
+    //     </Routes>
+    //   </div>
+    // </Router>
+  // );
 
     <ApolloProvider client={client}>
       <Router>
@@ -82,6 +82,7 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+  );
   
 
 }
