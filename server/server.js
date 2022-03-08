@@ -14,7 +14,6 @@ const server = new ApolloServer({
     context: authMiddleware
 });
 
-server.applyMiddleware({ app });
 
 // Set up Middleware 
 app.use(express.urlencoded({extended:false}));
@@ -37,7 +36,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
     app.listen(PORT, () => {
       console.log(`Server is running ${PORT}`);
       console.log(
-        `GraphQL server at http://localhost:${PORT}${server.graphqlPath}`
+        `GraphQL server at http://127.0.0.1:${PORT}${server.graphqlPath}`
       );
     });
   });
