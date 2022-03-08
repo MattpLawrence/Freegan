@@ -1,7 +1,6 @@
-import React from 'react';
-import auth from "../utils/auth";
-import {  Link } from "react-router-dom";
-import Logo from "./assets/images"
+import React from "react";
+import Auth from "../utils/auth";
+import { Link } from "react-router-dom";
 
 function navbar() {
 
@@ -9,11 +8,13 @@ function navbar() {
     if (auth.loggedIn()) {
       return (
         <div className="nav-wrapper">
-          <ul id="nav-mobile" className="right hide-on-med-and-down flex-row">
-            <li className="mx-1 brand-logo freeLogo">
-              <Link to="/">
-                Freegan
-              </Link>
+          <Link to={{ pathname: `/signupPage` }} className="brand-logo">
+            SignUp
+          </Link>
+
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li className="mx-1">
+              <a to="/">Freegan</a>
             </li>
             <li className="mx-1">
               <Link to="/dashboard">
@@ -36,22 +37,16 @@ function navbar() {
       );
     } else {
       return (
-        <div className="nav-wrapper">
-          <ul id="nav-mobile" className="right hide-on-med-and-down flex-row">
-          <li className="mx-1 brand-logo">
-              <Link to="/">
-                Freegan
-              </Link>
+        <div className="nav-wrapper leftAlign">
+          <Link to={{ pathname: `/` }} className="brand-logo">
+            &nbsp;&nbsp;Freegan
+          </Link>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li className="mx-1">
+              <Link to={{ pathname: `/signupPage` }}>SignUp</Link>
             </li>
             <li className="mx-1">
-              <Link to="/signup">
-                Signup
-              </Link>
-            </li>
-            <li className="mx-1">
-              <Link to="/login">
-                Log-In
-              </Link>
+              <Link to={{ pathname: `/loginPage` }}>LogIn</Link>
             </li>
           </ul>
         </div>

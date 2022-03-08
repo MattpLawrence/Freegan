@@ -1,14 +1,11 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useState } from "react";
 import "../src/components/Slider";
 import "./styles/App.css";
 import { setContext } from "@apollo/client/link/context";
 import { createHttpLink } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ChatPage from "./components/chat/ChatPage";
 import Navbar from "./components/Navbar";
-import SignUp from "./pages/SignUpPage";
-=======
 import React from "react";
 import Navbar from "./components/Navbar";
 
@@ -20,7 +17,6 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import User from "./pages/User";
 import { Route, Router, Routes } from "react-router-dom";
->>>>>>> 7084a6225202b7d24ebfa03423a93efaff6c4f8a
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,16 +41,22 @@ const client = new ApolloClient({
 
 function App() {
   return (
-<<<<<<< HEAD
-    <div className="App">
+
+
+    <Router>
+
       <div className="App">
         <Navbar />
-        {/* <ChatPage /> */}
-        <SignUp />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signupPage" element={<SignUpPage />} />
+          <Route path="/loginPage" element={<LoginPage />} />
+          <Route path="/userPage" element={<UserPage />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
-=======
+
     <ApolloProvider client={client}>
       <Router>
         <div>
@@ -80,7 +82,7 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
-  )
->>>>>>> 7084a6225202b7d24ebfa03423a93efaff6c4f8a
+  
+
 }
 export default App;

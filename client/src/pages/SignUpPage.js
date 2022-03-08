@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/signup.css";
 
-function SignUp() {
+function SignUpPage() {
   const [userInfo, setUserInfo] = useState({});
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -22,7 +22,6 @@ function SignUp() {
       setPassword(e.target.value);
     } else {
       setRePassword(e.target.value);
-      // Validate();
     }
   };
   function submitForm(e) {
@@ -43,8 +42,7 @@ function SignUp() {
       setRePassword("");
     }
   }
-  let validation = "";
-  // function Validate() {
+  //validate that thew two passwords match
   useEffect(() => {
     if (rePassword.length === 0) {
     } else {
@@ -151,4 +149,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignUpPage;
