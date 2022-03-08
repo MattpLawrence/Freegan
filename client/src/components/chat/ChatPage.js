@@ -20,22 +20,14 @@ function ChatPage({ socket }) {
   return (
     <div className="container" id="chatShadow">
       <div className="chat-container">
-        <header className="chat-header">{/* <h1> display name</h1> */}</header>
-        <main className="chat-main">
-          <div className="chat-sidebar">
-            <h3>
-              <i className="fas fa-comments"></i> Room:
-            </h3>
-            <h2 id="room-name">Main Chat</h2>
-            <h3>
-              <i className="fas fa-users"></i> Users
-            </h3>
-            <ul id="users">{/* <li>{{userData.name_display}}</li> */}</ul>
-          </div>
-          <div className="chat-messages">
-            <ChatList msgList={msgList} />
-          </div>
-        </main>
+        <header className="chat-header">
+          <h5>Chat</h5>
+        </header>
+
+        <div className="chat-messages">
+          <ChatList msgList={msgList} />
+        </div>
+
         <div className="chat-form-container">
           <ChatForm addMessage={addMessage} socket={socket} />
         </div>
