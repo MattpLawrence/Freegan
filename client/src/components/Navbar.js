@@ -1,6 +1,7 @@
 import React from 'react';
 import auth from "../utils/auth";
 import {  Link } from "react-router-dom";
+import Logo from "./assets/images"
 
 function navbar() {
 
@@ -9,7 +10,7 @@ function navbar() {
       return (
         <div className="nav-wrapper">
           <ul id="nav-mobile" className="right hide-on-med-and-down flex-row">
-            <li className="mx-1 brand-logo">
+            <li className="mx-1 brand-logo freeLogo">
               <Link to="/">
                 Freegan
               </Link>

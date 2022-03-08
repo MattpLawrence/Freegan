@@ -19,10 +19,10 @@ const profileSchema = new Schema({
     type: String,
     trim: true
   },
-  items: {
+  items:[ {
     type: Schema.Types.ObjectId,
     ref: 'Item'
-  }
+  }]
 });
 
 const Profile = model('Profile', profileSchema);
