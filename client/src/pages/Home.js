@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Searchbar from "../components/Searchbar";
-import Slider from "../components/Slider"
+// import Slider from "../components/Slider"
 import Hscroll from "../components/Hscroll"
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
         <div className="container">
             <Navbar />
             <Searchbar />
-            <Slider />
+            {/* <Slider /> */}
             <Hscroll />
         </div>
     );
