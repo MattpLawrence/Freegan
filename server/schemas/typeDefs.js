@@ -15,7 +15,7 @@ const typeDefs = gql`
     lastName: String
     zipCode: Int
     photo: String
-    profile: Profile
+    items: [Item]
   }
 
   type User {
@@ -49,7 +49,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addUser(username: String!, email:String!, password: String!): Auth
+    addUser(email:String!, password: String!): Auth
     login(email: String!, password:String!): Auth
     addProfile(firstName: String!, lastName: String!, zipCode: Int!):Profile
     addItem(profileId: ID!, name: String!, description: String!, quantity: Int! ):Profile
