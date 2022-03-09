@@ -29,11 +29,11 @@ const resolvers = {
     },
     //  populate the items with categories and query the first and last name associated with the item
     items: async () => {
-      return Item.find.populate("categories");
+      return Item.find().populate("categories");
     },
     // find singular item
     item: async (parent, { itemId }) => {
-      return Iteme.findOne({ _id: itemId });
+      return Item.findOne({ _id: itemId });
     },
     // find the individual
     individual: async (parent, args, context) => {
