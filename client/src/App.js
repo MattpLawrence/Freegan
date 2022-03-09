@@ -1,6 +1,8 @@
 
+
 //import React, { useEffect, useState } from "react";
 import "../src/components/Slider";
+import React, { useEffect, useState } from "react";
 import "./styles/App.css";
 import { setContext } from "@apollo/client/link/context";
 //import { createHttpLink } from "@apollo/client";
