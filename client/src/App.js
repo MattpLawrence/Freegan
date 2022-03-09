@@ -1,24 +1,20 @@
 
 
-//import React, { useEffect, useState } from "react";
-import "../src/components/Slider";
 import React, { useEffect, useState } from "react";
 import "./styles/App.css";
 import { setContext } from "@apollo/client/link/context";
 //import { createHttpLink } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import React from "react";
-//import Navbar from "./components/Navbar";
 
 //import { setContext } from "@apollo/client/link/context";
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from "@apollo/client";
 
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import User from "./pages/User";
-//import { Route, Router, Routes } from "react-router-dom";
+import Home from "./pages/HomePage";
+import Login from "./pages/LoginPage";
+import Signup from "./pages/SignUpPage";
+import User from "./pages/UserPage";
+
 
 // constructor that will be used for GraphQL API endpoint
 const httpLink = createHttpLink({
