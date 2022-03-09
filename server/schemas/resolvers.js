@@ -9,8 +9,8 @@ const resolvers = {
       return User.find.populate("profiles");
     },
     // populate the singular use with the email and password
-    user: async (parent, { email }) => {
-      return User.findOne({ email }).populate("profiles");
+    user: async (parent, { username }) => {
+      return User.findOne({ username }).populate("profiles");
     },
     //  populate profiles with items
     profiles: async () => {

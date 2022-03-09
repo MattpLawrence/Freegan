@@ -15,7 +15,7 @@ const typeDefs = gql`
     lastName: String
     zipCode: Int
     photo: String
-    profile: Profile
+    items: [Item]
   }
 
   type User {
