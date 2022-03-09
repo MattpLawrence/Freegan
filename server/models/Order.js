@@ -1,3 +1,5 @@
+//Future development model to create multiple items in an order
+
 const { Schema, model } = require('mongoose');
 
 const orderSchema = new Schema({

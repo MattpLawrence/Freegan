@@ -19,14 +19,14 @@ const profileSchema = new Schema({
     type: String,
     trim: true
   },
-  // items:[ {
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'Item'
-  // }]
-    orders:[ {
+  items:[ {
     type: Schema.Types.ObjectId,
-    ref: 'Order'
+    ref: 'Item'
   }]
+  //   orders:[ {
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Order'
+  // }]
 
 });
 
