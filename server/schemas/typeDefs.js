@@ -8,12 +8,6 @@ const typeDefs = gql`
     quantity: Int
     category: [Category]
   }
-  
-  type Order {
-    _id:ID
-    claimDate: String
-    items: [Item]
-  }
 
   type Profile {
     _id: ID
@@ -29,7 +23,7 @@ const typeDefs = gql`
     email: String
     password: String
     profile: Profile
-    orders: [Order]
+    items: [Item]
   }
 
   type Category {
@@ -43,14 +37,15 @@ const typeDefs = gql`
   }
 
   type Query {
+    users: [User]
+    user: User
+    profiles: [Profile]
+    profile: Profile
     items: [Item]
     item: Item
-    profiles: [Profile]
-    users: [User]
-    categories:[Category]
-    user: User
-    order: Order
-    orders: [Order]
+    category : Category
+    categories : [Category]
+    individual: User
   }
 
   type Mutation {
